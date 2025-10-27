@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="◯◯ – 公式ページ">
+<meta property="og:title" content="◯◯">
+<meta property="og:description" content="◯◯ – 公式ページ">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/og.jpg">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#111827">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>お申し込み — 公助君</title>
+  <meta name="description" content="DiscordセキュリティBot『公助君』のお申し込みフォーム。">
+  <link rel="icon" href="icon.png" type="image/png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{--bg:#0b1020;--card:#0f1530;--fg:#e6e9f5;--muted:#a8b0d4;--brand:#7c6bff}
+    html,body{
+      background:
+        radial-gradient(1200px 600px at 80% -10%, rgba(41,182,246,.15), transparent),
+        radial-gradient(1000px 500px at -10% 20%, rgba(124,107,255,.18), transparent),
+        var(--bg);
+      color:var(--fg);
+      font-family:'Inter','Noto Sans JP',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica Neue,Arial
+    }
+    .glass{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.12);backdrop-filter: blur(8px);}
+  </style>
+</head>
+<script src="site.bundle.js" defer></script>
+<body>
+  <a href="#main" class="skip">メインへスキップ</a>
+<div id="main" tabindex="-1"></div>
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-[#0b1020]/70 backdrop-blur">
+    <div class="mx-auto max-w-7xl px-6 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 font-extrabold">
+        <img src="icon.png" alt="公助君" class="h-8 w-8 rounded-xl object-cover"/>
+        <span>公助君</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-[var(--muted)]">
+        <a href="index.html#features" class="hover:text-white">機能</a>
+        <a href="index.html#pricing" class="hover:text-white">料金</a>
+        <a href="terms.html" class="hover:text-white">利用規約</a>
+        <a href="privacy.html" class="hover:text-white">プライバシー</a>
+        <a href="tokushoho.html" class="hover:text-white">特商法表示</a>
+      </nav>
+      <a href="https://discord.com/oauth2/authorize?client_id=1405442735892201535&permissions=8&integration_type=0&scope=bot"
+         class="rounded-xl px-4 py-2 bg-[var(--brand)] text-white text-sm font-semibold hover:opacity-90">Botを招待</a>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-4xl px-6 py-10">
+    <h1 class="text-3xl font-extrabold mb-4">お申し込み</h1>
+    <p class="text-[var(--muted)] mb-6">以下のフォームに必要事項をご記入ください。送信後、自動返信または担当よりご連絡いたします。</p>
+
+    <div class="glass rounded-2xl p-3">
+      <div class="rounded-xl overflow-hidden">
+        <!-- 埋め込み。必要に応じて Google フォーム側の「送信」→「<> 埋め込む」で表示される iframe の URL に差し替えてください。 -->
+        <iframe src="https://forms.gle/1eowFHDR7fgy3QRr8"
+                style="width:100%; height:1800px; border:0;"
+                allowfullscreen
+                loading="lazy">読み込んでいます…</iframe>
+      </div>
+    </div>
+
+    <div class="mt-6 text-sm text-[var(--muted)]">
+      フォームが表示されない場合は
+      <a class="underline" href="https://forms.gle/1eowFHDR7fgy3QRr8" target="_blank" rel="noopener">こちら</a>
+      から直接開いてください。
+    </div>
+  </main>
+
+  <footer class="border-t border-white/10">
+    <div class="mx-auto max-w-7xl px-6 py-10 text-sm text-[var(--muted)] flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>&copy; <span id="y"></span> 公助君. All rights reserved.</div>
+      <div class="flex gap-4">
+        <a href="terms.html" class="hover:text-white">利用規約</a>
+        <a href="privacy.html" class="hover:text-white">プライバシー</a>
+        <a href="tokushoho.html" class="hover:text-white">特商法表示</a>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
